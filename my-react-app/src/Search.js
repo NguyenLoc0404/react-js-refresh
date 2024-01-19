@@ -1,10 +1,10 @@
-const Search = () => {
+const Search = ({showAllProduct, setButtonShowAll, keyword,setKeywordSearch}) => {
   return (
     <div style={{ display: "block" }}>
-      <input classname="form-control" type="text" placeholder="Search..." />
+      <input className="form-control" type="text" placeholder="Search..." onChange={(e) => setKeywordSearch(e.target.value)} />
       <br />
-      <input classname="form-check-input" type="checkbox" id="dropdownCheck" />
-      <label classname="form-check-label">Only show products in stock</label>
+      <input className="form-check-input" type="checkbox" id="dropdownCheck"  onClick={setButtonShowAll}/>
+      <label className="form-check-label">Only show products in stock</label>
     </div>
   );
 };
